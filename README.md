@@ -1,291 +1,77 @@
-# kentarrito.github.io
-Repository for personal website
+# ⚡️ Kentaro Seki — Developer & Researcher
 
+> Based in **Kyoto, Japan** · Open to collaborations
+> *Physics & Coding Lover · LLMs · Plasma Physics · Reinforcement Learning · Philosophy*
 
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Personal Website</title>
-  <meta name="description" content="Personal website and portfolio of Your Name." />
-  <meta property="og:title" content="Your Name — Personal Website" />
-  <meta property="og:description" content="Personal website and portfolio of Your Name." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://USERNAME.github.io/" />
-  <meta name="color-scheme" content="light dark" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡️</text></svg>">
-  <style>
-    :root {
-      --bg: #0b0d12;
-      --bg-alt: #111420;
-      --text: #e6e9ef;
-      --muted: #b3b8c5;
-      --card: #151a28;
-      --accent: #7c9cff;
-      --accent-2: #79f2c0;
-      --border: #2a3042;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-    }
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg: #f7f9fc;
-        --bg-alt: #ffffff;
-        --text: #0b0d12;
-        --muted: #495168;
-        --card: #ffffff;
-        --accent: #3b5bff;
-        --accent-2: #0fb982;
-        --border: #e6eafe;
-        --shadow: 0 10px 24px rgba(34, 52, 95, .12);
-      }
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 100% -10%, rgba(124,156,255,.15), transparent 60%),
-                  radial-gradient(1000px 500px at -10% 110%, rgba(121,242,192,.12), transparent 60%), var(--bg);
-      color: var(--text);
-      letter-spacing: 0.2px;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-    header {
-      position: sticky; top: 0; backdrop-filter: blur(8px);
-      background: color-mix(in oklab, var(--bg), transparent 35%);
-      border-bottom: 1px solid var(--border);
-      z-index: 50;
-    }
-    .nav {
-      display: flex; align-items: center; justify-content: space-between; padding: 14px 0;
-    }
-    .brand { font-weight: 800; letter-spacing: .5px; }
-    .brand a { color: var(--text); text-decoration: none; }
-    .nav ul { display: flex; gap: 18px; list-style: none; padding: 0; margin: 0; }
-    .nav a { color: var(--text); opacity: .85; }
-    .nav a:hover { opacity: 1; }
-    .theme-toggle {
-      border: 1px solid var(--border); background: var(--bg-alt); color: var(--text);
-      padding: 8px 12px; border-radius: 10px; box-shadow: var(--shadow);
-      cursor: pointer;
-    }
-    .hero {
-      display: grid; grid-template-columns: 1.25fr 1fr; gap: 28px; align-items: center;
-      padding: 64px 0 40px;
-    }
-    @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
-    .kicker { color: var(--accent-2); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; }
-    h1 { font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.1; margin: 10px 0 16px; }
-    .lead { color: var(--muted); font-size: 1.05rem; }
-    .cta { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--border);
-      background: var(--card); color: var(--text); padding: 10px 14px; border-radius: 12px; box-shadow: var(--shadow);
-      text-decoration: none; font-weight: 600;
-    }
-    .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #0b0d12; border: none; }
-    section { padding: 48px 0; }
-    .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-    @media (max-width: 980px) { .grid { grid-template-columns: repeat(2,1fr); } }
-    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
-    .card {
-      background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; box-shadow: var(--shadow);
-    }
-    .card h3 { margin: 6px 0 8px; font-size: 1.05rem; }
-    .meta { font-size: .9rem; color: var(--muted); }
-    .footer { border-top: 1px solid var(--border); padding: 24px 0 60px; color: var(--muted); }
-    .avatar {
-      width: 140px; height: 140px; border-radius: 50%; border: 3px solid var(--border); object-fit: cover;
-      box-shadow: var(--shadow);
-    }
-    .tag { display:inline-block; padding: 4px 10px; border:1px solid var(--border); border-radius: 100px; margin-right:6px; margin-bottom:6px; font-size:.85rem; color: var(--muted); background: var(--bg-alt); }
-    /* Skip link */
-    .skip { position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden; }
-    .skip:focus { position: static; width: auto; height: auto; padding: 8px; background: var(--accent); color:#000; }
-  </style>
-  <script>
-    // Respect user preference + manual toggle
-    (function() {
-      const stored = localStorage.getItem('theme');
-      if (stored) document.documentElement.dataset.theme = stored;
-    })();
-  </script>
-</head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header>
-    <div class="container nav" role="navigation" aria-label="Primary">
-      <div class="brand"><a href="#">Your Name</a></div>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#writing">Writing</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
-    </div>
-  </header>
+---
 
-  <main id="main" class="container">
-    <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div>
-        <div class="kicker">Hello, I’m</div>
-        <h1 id="hero-title">Your Name — Developer & Researcher</h1>
-        <p class="lead">
-          I build data products and intelligent tools. Interested in search, agents, and high-performance systems.
-          Currently at <strong>Company</strong>. Previously @ Somewhere.
-        </p>
-        <div class="cta">
-          <a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">View Résumé</a>
-          <a class="btn" href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="mailto:you@example.com">Email me</a>
-        </div>
-        <div style="margin-top:14px">
-          <span class="tag">TypeScript</span><span class="tag">Python</span><span class="tag">LLMs</span><span class="tag">RAG</span><span class="tag">HPC</span>
-        </div>
-      </div>
-      <div style="text-align:center;">
-        <img class="avatar" src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Your portrait or logo" />
-        <p class="meta" style="margin-top:10px;">Based in City, Country · Open to collaborations</p>
-      </div>
-    </section>
+## 👋 Hello
 
-    <!-- About -->
-    <section id="about" aria-labelledby="about-title">
-      <h2 id="about-title">About</h2>
-      <div class="card">
-        <p>
-          I enjoy turning messy ideas into usable products. My work spans full-stack web, ML infra, and
-          information retrieval. When I’m not building, I write notes and give talks about developer tooling and AI.
-        </p>
-        <p class="meta">Currently exploring: lightweight agents, reward-model search, and retrieval-centric UX.</p>
-      </div>
-    </section>
+Hi, I’m **Kentaro** — a developer and researcher passionate about physics, coding, and building smart AI systems.
+I study **plasma physics** and design **LLM-based systems** to accelerate scientific discovery.
 
-    <!-- Projects -->
-    <section id="projects" aria-labelledby="projects-title">
-      <h2 id="projects-title">Projects</h2>
-      <div class="grid" id="projectsGrid">
-        <!-- Static examples (you can keep or remove if using auto-fetch below) -->
-        <article class="card">
-          <h3>Project A</h3>
-          <p>A tiny search engine that learns user intent with feedback loops.</p>
-          <p class="meta">TypeScript · Python · vLLM</p>
-        </article>
-        <article class="card">
-          <h3>Project B</h3>
-          <p>Negotiation simulator with multi-agent LLMs and transparent strategies.</p>
-          <p class="meta">Python · Ray · RL</p>
-        </article>
-        <article class="card">
-          <h3>Project C</h3>
-          <p>High-throughput embedding + reranking pipeline with caching and sharding.</p>
-          <p class="meta">CUDA · Faiss · Triton</p>
-        </article>
-      </div>
-      <p class="meta" id="repoNote" style="margin-top:8px;">(Below will auto-show your latest public repos—set your username in the code.)</p>
-      <div class="grid" id="repoGrid" aria-live="polite"></div>
-    </section>
+I’m currently founding **[KyotoAI Inc.](https://github.com/kyotoai)** — a company at the intersection of AI and real-world science.
 
-    <!-- Writing -->
-    <section id="writing" aria-labelledby="writing-title">
-      <h2 id="writing-title">Writing</h2>
-      <div class="grid">
-        <article class="card">
-          <h3><a href="#">Designing Reward-Model Search</a></h3>
-          <p>Notes on replacing pure similarity with preference-shaped retrieval.</p>
-          <p class="meta">5 min read · 2025-10-01</p>
-        </article>
-        <article class="card">
-          <h3><a href="#">Composable Agent Patterns</a></h3>
-          <p>From single-shot tools to long-running, feedback-driven loops.</p>
-          <p class="meta">7 min read · 2025-09-12</p>
-        </article>
-        <article class="card">
-          <h3><a href="#">Docs as Data</a></h3>
-          <p>Turning documentation into structured, queriable knowledge.</p>
-          <p class="meta">4 min read · 2025-08-30</p>
-        </article>
-      </div>
-    </section>
+🎯 **Interests:** LLMs · Plasma Physics · Engineering · Biology · Philosophy
 
-    <!-- Contact -->
-    <section id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contact</h2>
-      <div class="card">
-        <p>Want to chat about a project or research? I’m available for collaborations and advisory.</p>
-        <p>
-          ✉️ <a href="mailto:you@example.com">you@example.com</a> ·
-          🐦 <a href="https://x.com/" target="_blank" rel="noopener">X/Twitter</a> ·
-          💼 <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a> ·
-          💻 <a href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a>
-        </p>
-      </div>
-    </section>
-  </main>
+---
 
-  <footer class="footer">
-    <div class="container">
-      <small>© <span id="year"></span> Your Name. Built with plain HTML/CSS/JS, hosted on GitHub Pages.</small>
-    </div>
-  </footer>
+## 🧠 About Me
 
-  <!-- JSON-LD for better SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Your Name",
-    "url": "https://USERNAME.github.io/",
-    "sameAs": ["https://github.com/USERNAME"],
-    "jobTitle": "Software Developer",
-    "knowsAbout": ["Information Retrieval","LLMs","Agents","HPC"]
-  }
-  </script>
+I love teaching myself something new and tackling deep questions that fascinate me.
+I learn through building — experimenting, failing fast, and refining ideas hands-on.
+I prefer focusing deeply on one thing at a time, pushing until I understand it from first principles.
 
-  <script>
-    // Simple theme toggle: cycles light <-> dark, persists
-    const btn = document.getElementById('themeToggle');
-    btn?.addEventListener('click', () => {
-      const d = document.documentElement;
-      const next = d.dataset.theme === 'light' ? 'dark' : (d.dataset.theme === 'dark' ? '' : 'light');
-      d.dataset.theme = next;
-      localStorage.setItem('theme', next);
-    });
+> **Currently exploring:**
+> Reward-model search and real-time reinforcement learning for autonomous agents.
 
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
+---
 
-    // Auto-fetch latest GitHub repos (public)
-    // ✅ Replace USERNAME with your GitHub handle
-    const GITHUB_USER = 'USERNAME';
-    const repoGrid = document.getElementById('repoGrid');
-    const repoNote = document.getElementById('repoNote');
+## 🚀 Projects
 
-    async function loadRepos() {
-      if (!GITHUB_USER || GITHUB_USER === 'USERNAME') return; // Skip until user sets it
-      try {
-        const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=6`);
-        if (!res.ok) throw new Error('GitHub API error');
-        const repos = await res.json();
-        if (!Array.isArray(repos) || repos.length === 0) return;
-        repoNote.textContent = "Latest public repositories:";
-        repoGrid.innerHTML = repos.map(r => `
-          <article class="card">
-            <h3><a href="${r.html_url}" target="_blank" rel="noopener">${r.name}</a></h3>
-            <p>${r.description ? r.description.replace(/</g,"&lt;") : "No description"}</p>
-            <p class="meta">★ ${r.stargazers_count} · ${r.language ?? "—"} · Updated ${new Date(r.updated_at).toLocaleDateString()}</p>
-          </article>
-        `).join('');
-      } catch (e) {
-        console.warn(e);
-      }
-    }
-    loadRepos();
-  </script>
-</body>
-</html>
+| Project                                                                          | Description                                                                                                                                                                         | Tech Stack                                                   |
+| :------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
+| [**RMSearch**](https://github.com/kyotoai/RMSearch)                              | Reward-model-based search system designed for broader usage and adaptability.                                                                                                       | Reinforcement Learning · Python · LLM · Search               |
+| [**SEIMEI**](https://github.com/kyotoai/SEIMEI)                                  | Multi-agent system integrated by RMSearch.                                                                                                                                          | Python · Agent Systems                                       |
+| [**Open-World-Science**](https://github.com/kentarrito/Open-World-Science)       | A game simulating the scientific world — vapor machines, engines, and thermal power plants.                                                                                         | Unity · C# · Simulation                                      |
+| **Drone from Scratch**                                                           | Built a drone-shooting kit: when a user aims an IR laser, the drone detects and dodges it via image recognition. Led a 3-person team for 6 months to make a real drone and gun kit. | Drone Engineering · Control Theory · CAD · Image Recognition |
+| **Solar Panel from Scratch**                                                     | Constructed a **dye-sensitized solar cell (DSSC)** from raw materials (carbon, fabric, etc.).                                                                                       | DSSC · Engineering                                           |
+| [**Kanji Generator**](https://github.com/kentarrito/kanji_generator)             | Fine-tuned a Stable Diffusion model to generate new Japanese characters.                                                                                                            | Text-to-Image AI · Fine-Tuning                               |
+| [**AI on Slime Volley Game**](https://github.com/kentarrito/neat_slimevolleygym) | Applied reinforcement learning to train agents in the Slime Volley Gym environment.                                                                                                 | Reinforcement Learning · Games                               |
+
+---
+
+## 🎓 Studies
+
+| Field                       | What I Explored                                                                                            | Keywords                                        |
+| :-------------------------- | :--------------------------------------------------------------------------------------------------------- | :---------------------------------------------- |
+| **Theoretical Physics**     | Self-taught for 3 years; explored deep questions about the universe and the philosophical side of physics. | QFT · Particle Physics · Interpretation Problem |
+| **Artificial Intelligence** | Learned and implemented LLMs since high school; even built an auto-gradient algorithm from scratch.        | LLMs · AI · Reinforcement Learning              |
+| **Game Creation**           | Built multiple games with Unity, Blender, and JavaScript — both 3D and web-based.                          | Unity · Blender · Web Games                     |
+| **Engineering**             | Designed electrical circuits and machines like a **theremin** and **solar panel** for fun.                 | EC Design · Hardware Prototyping                |
+| **Cell Biology**            | Studied *Essential Cell Biology*; researched **phase separation** inside *Chlamydomonas* in a biology lab. | Cell Biology · Phase Separation                 |
+
+---
+
+## ✍️ Writing
+
+| Title                                                                                                       | Description                                                          | Date                       |
+| :---------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------- | :------------------------- |
+| [**Designing Reward-Model Search**](https://github.com/kyotoai/RMSearch/blob/main/paper_writing/draft1.pdf) | Notes on replacing pure similarity with preference-shaped retrieval. | *15 min read · 2025-10-01* |
+
+---
+
+## 📬 Contact
+
+Want to chat about a project or research idea?
+I’m always open to collaborations and advisory roles.
+
+* ✉️ [sekikentaro43@gmail.com](mailto:sekikentaro43@gmail.com)
+* 🐦 [X / Twitter](https://x.com/kentarrito)
+* 💼 [LinkedIn](https://www.linkedin.com/in/kentaro-seki-b12000339/)
+* 💻 [GitHub](https://github.com/kentarrito)
+
+---
+
+© **Kentaro Seki** · Built using markdown format
+Hosted on [GitHub Pages](https://kentarrito.github.io/)
