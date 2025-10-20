@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Personal Website</title>
-  <meta name="description" content="Personal website and portfolio of Your Name." />
+  <title>Kentaro Seki — Personal Website</title>
+  <meta name="description" content="Personal website and portfolio of Kentaro Seki." />
   <meta property="og:title" content="Kentaro Seki — Personal Website" />
   <meta property="og:description" content="Personal website and portfolio of Kentaro Seki." />
   <meta property="og:type" content="website" />
@@ -114,7 +114,7 @@
   <a class="skip" href="#main">Skip to content</a>
   <header>
     <div class="container nav" role="navigation" aria-label="Primary">
-      <div class="brand"><a href="#">Your Name</a></div>
+      <div class="brand"><a href="#">Kentaro Seki</a></div>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -130,15 +130,16 @@
     <section class="hero" aria-labelledby="hero-title">
       <div>
         <div class="kicker">Hello, I’m</div>
-        <h1 id="hero-title">Your Name — Developer & Researcher</h1>
+        <h1 id="hero-title">Kentaro — Developer & Researcher</h1>
         <p class="lead">
-          I build data products and intelligent tools. Interested in search, agents, and high-performance systems.
-          Currently at <strong>Company</strong>. Previously @ Somewhere.
+          I'm physics & coding lover! I study plasma physics and build smart AI system to help it. Interested in LLM, plasma physics, engineering, biology, philosophy.
+          Currently at <strong>Company</strong>. Previously @ KyotoAI Inc.
+          I'm working on RMSearch & SEIMEI library.
         </p>
         <div class="cta">
           <a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">View Résumé</a>
-          <a class="btn" href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="mailto:you@example.com">Email me</a>
+          <a class="btn" href="https://github.com/kentarrito" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="mailto:sekikentaro43@gmail.com">Email me</a>
         </div>
         <div style="margin-top:14px">
           <span class="tag">TypeScript</span><span class="tag">Python</span><span class="tag">LLMs</span><span class="tag">RAG</span><span class="tag">HPC</span>
@@ -146,7 +147,7 @@
       </div>
       <div style="text-align:center;">
         <img class="avatar" src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Your portrait or logo" />
-        <p class="meta" style="margin-top:10px;">Based in City, Country · Open to collaborations</p>
+        <p class="meta" style="margin-top:10px;">Based in Kyoto, Japan · Open to collaborations</p>
       </div>
     </section>
 
@@ -168,12 +169,12 @@
       <div class="grid" id="projectsGrid">
         <!-- Static examples (you can keep or remove if using auto-fetch below) -->
         <article class="card">
-          <h3>Project A</h3>
+          <h3>RMSearch</h3>
           <p>A tiny search engine that learns user intent with feedback loops.</p>
           <p class="meta">TypeScript · Python · vLLM</p>
         </article>
         <article class="card">
-          <h3>Project B</h3>
+          <h3>SEIMEI</h3>
           <p>Negotiation simulator with multi-agent LLMs and transparent strategies.</p>
           <p class="meta">Python · Ray · RL</p>
         </article>
@@ -215,10 +216,10 @@
       <div class="card">
         <p>Want to chat about a project or research? I’m available for collaborations and advisory.</p>
         <p>
-          ✉️ <a href="mailto:you@example.com">you@example.com</a> ·
-          🐦 <a href="https://x.com/" target="_blank" rel="noopener">X/Twitter</a> ·
-          💼 <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a> ·
-          💻 <a href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a>
+          ✉️ <a href="mailto:sekikentaro43@gmail.com">sekikentaro43@gmail.com</a> ·
+          🐦 <a href="https://x.com/kentarrito" target="_blank" rel="noopener">X/Twitter</a> ·
+          💼 <a href="https://www.linkedin.com/in/kentaro-seki-b12000339/" target="_blank" rel="noopener">LinkedIn</a> ·
+          💻 <a href="https://github.com/kentarrito" target="_blank" rel="noopener">GitHub</a>
         </p>
       </div>
     </section>
@@ -235,10 +236,10 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Your Name",
-    "url": "https://USERNAME.github.io/",
-    "sameAs": ["https://github.com/USERNAME"],
-    "jobTitle": "Software Developer",
+    "name": "Kentaro",
+    "url": "https://kentarrito.github.io/",
+    "sameAs": ["https://github.com/kentarrito"],
+    "jobTitle": "Physicist % AI Developer",
     "knowsAbout": ["Information Retrieval","LLMs","Agents","HPC"]
   }
   </script>
@@ -263,7 +264,7 @@
     const repoNote = document.getElementById('repoNote');
 
     async function loadRepos() {
-      if (!GITHUB_USER || GITHUB_USER === 'USERNAME') return; // Skip until user sets it
+      if (!GITHUB_USER || GITHUB_USER === 'Kentaro Seki') return; // Skip until user sets it
       try {
         const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=6`);
         if (!res.ok) throw new Error('GitHub API error');
