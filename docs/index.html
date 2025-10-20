@@ -158,7 +158,7 @@
           I enjoy turning messy ideas into usable products. My work spans full-stack web, ML infra, and
           information retrieval. When I’m not building, I write notes and give talks about developer tooling and AI.
         </p>
-        <p class="meta">Currently exploring: lightweight agents, reward-model search, and retrieval-centric UX.</p>
+        <p class="meta">Currently exploring: reward-model search and real-time reinforcement learning on agents.</p>
       </div>
     </section>
 
@@ -168,22 +168,17 @@
       <div class="grid" id="projectsGrid">
         <!-- Static examples (you can keep or remove if using auto-fetch below) -->
         <article class="card">
-          <h3>RMSearch</h3>
-          <p>A tiny search engine that learns user intent with feedback loops.</p>
-          <p class="meta">TypeScript · Python · vLLM</p>
+          <h3><a href="https://github.com/kyotoai/RMSearch">RMSearch</a></h3>
+          <p>Reward-model-based search system for broader usage and high adaptability.</p>
+          <p class="meta">Reinforcement-Learning · Python · LLM · Search</p>
         </article>
         <article class="card">
-          <h3>SEIMEI</h3>
-          <p>Negotiation simulator with multi-agent LLMs and transparent strategies.</p>
-          <p class="meta">Python · Ray · RL</p>
-        </article>
-        <article class="card">
-          <h3>Project C</h3>
-          <p>High-throughput embedding + reranking pipeline with caching and sharding.</p>
-          <p class="meta">CUDA · Faiss · Triton</p>
+          <h3><a href="https://github.com/kyotoai/SEIMEI">SEIMEI</a></h3>
+          <p>Multi-agent system integrated by RMSearch.</p>
+          <p class="meta">Python · Agent</p>
         </article>
       </div>
-      <p class="meta" id="repoNote" style="margin-top:8px;">(Below will auto-show your latest public repos—set your username in the code.)</p>
+      <!--<p class="meta" id="repoNote" style="margin-top:8px;">(Below will auto-show your latest public repos—set your username in the code.)</p> -->
       <div class="grid" id="repoGrid" aria-live="polite"></div>
     </section>
 
@@ -192,19 +187,9 @@
       <h2 id="writing-title">Writing</h2>
       <div class="grid">
         <article class="card">
-          <h3><a href="#">Designing Reward-Model Search</a></h3>
+          <h3><a href="https://github.com/kyotoai/RMSearch/blob/main/paper_writing/draft1.pdf">Designing Reward-Model Search</a></h3>
           <p>Notes on replacing pure similarity with preference-shaped retrieval.</p>
-          <p class="meta">5 min read · 2025-10-01</p>
-        </article>
-        <article class="card">
-          <h3><a href="#">Composable Agent Patterns</a></h3>
-          <p>From single-shot tools to long-running, feedback-driven loops.</p>
-          <p class="meta">7 min read · 2025-09-12</p>
-        </article>
-        <article class="card">
-          <h3><a href="#">Docs as Data</a></h3>
-          <p>Turning documentation into structured, queriable knowledge.</p>
-          <p class="meta">4 min read · 2025-08-30</p>
+          <p class="meta">15 min read · 2025-10-01</p>
         </article>
       </div>
     </section>
@@ -239,7 +224,7 @@
     "url": "https://kentarrito.github.io/",
     "sameAs": ["https://github.com/kentarrito"],
     "jobTitle": "Physicist % AI Developer",
-    "knowsAbout": ["Information Retrieval","LLMs","Agents","HPC"]
+    "knowsAbout": ["Information Retrieval","LLMs","Agents"]
   }
   </script>
 
